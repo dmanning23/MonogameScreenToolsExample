@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ExternalStorageBuddy;
+using ExternalStorageBuddy.WindowsDX;
+using System;
 
-
-namespace Testbed
+namespace MonogameScreenToolsExample
 {
     /// <summary>
     /// The main class.
@@ -14,8 +15,11 @@ namespace Testbed
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
-                game.Run();
+			using (var game = new Game1())
+			{
+				game.Services.AddService<IExternalStorageHelper>(new ExternalStorageHelper());
+				game.Run();
+			}
         }
     }
 }

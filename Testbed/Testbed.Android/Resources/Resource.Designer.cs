@@ -26,8 +26,42 @@ namespace Testbed.Android
 		
 		public static void UpdateIdValues()
 		{
+			global::ExternalStorageBuddy.Android.Resource.String.app_name = global::Testbed.Android.Resource.String.app_name;
+			global::ExternalStorageBuddy.Android.Resource.String.hello = global::Testbed.Android.Resource.String.hello;
+			global::FilenameBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::FilenameBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::FontBuddyLib.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::FontBuddyLib.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::GameTimer.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::GameTimer.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::HadoukInput.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::HadoukInput.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::InputHelper.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::InputHelper.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::MatrixExtensions.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::MatrixExtensions.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::MonogameScreenTools.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::MonogameScreenTools.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
 			global::MonogameScreenTools.Android.Resource.String.app_name = global::Testbed.Android.Resource.String.app_name;
 			global::MonogameScreenTools.Android.Resource.String.hello = global::Testbed.Android.Resource.String.hello;
+			global::MouseBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::MouseBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::PrimitiveBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::PrimitiveBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::RandomExtensions.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::RandomExtensions.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::ResolutionBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::ResolutionBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::StateMachineBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::StateMachineBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::ToastBuddyLib.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::ToastBuddyLib.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::TouchScreenBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::TouchScreenBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::Vector2Extensions.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::Vector2Extensions.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
+			global::XmlBuddy.Android.Resource.String.ApplicationName = global::Testbed.Android.Resource.String.ApplicationName;
+			global::XmlBuddy.Android.Resource.String.Hello = global::Testbed.Android.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -65,17 +99,17 @@ namespace Testbed.Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030003
-			public const int ApplicationName = 2130903043;
-			
-			// aapt resource value: 0x7f030002
-			public const int Hello = 2130903042;
-			
 			// aapt resource value: 0x7f030001
-			public const int app_name = 2130903041;
+			public const int ApplicationName = 2130903041;
 			
 			// aapt resource value: 0x7f030000
-			public const int hello = 2130903040;
+			public const int Hello = 2130903040;
+			
+			// aapt resource value: 0x7f030003
+			public const int app_name = 2130903043;
+			
+			// aapt resource value: 0x7f030002
+			public const int hello = 2130903042;
 			
 			static String()
 			{

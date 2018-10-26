@@ -1,8 +1,10 @@
 ﻿using System;
+using ExternalStorageBuddy;
+using ExternalStorageBuddy.iOS;
 using Foundation;
 using UIKit;
 
-namespace Testbed.iOS
+namespace MonogameScreenToolsExample.iOS
 {
 	[Register("AppDelegate")]
 	class Program : UIApplicationDelegate
@@ -12,6 +14,7 @@ namespace Testbed.iOS
 		internal static void RunGame()
 		{
 			game = new Game1();
+			game.Services.AddService<IExternalStorageHelper>(new ExternalStorageHelper());
 			game.Run();
 		}
 

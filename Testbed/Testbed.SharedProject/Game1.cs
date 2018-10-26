@@ -1,147 +1,87 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+﻿using FontBuddyLib;
+using MenuBuddy;
+using Microsoft.Xna.Framework;
+using ResolutionBuddy;
+using ToastBuddyLib;
 using MonogameScreenTools;
-using System;
-using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Graphics;
+#if __IOS__ || ANDROID
+using Plugin.DeviceInfo;
+using Plugin.DeviceInfo.Abstractions;
+#endif
 
-namespace Testbed
+namespace MonogameScreenToolsExample
 {
-	/// <summary>
-	/// This is the main type for your game.
-	/// </summary>
-	public class Game1 : Game
+#if __IOS__ || ANDROID || WINDOWS_UAP
+	public class Game1 : TouchGame
+#else
+	public class Game1 : MouseGame
+#endif
 	{
-		#region Properties
+		bool IsTablet
+		{
+			get
+			{
+#if __IOS__ || ANDROID
+				return CrossDeviceInfo.Current.Idiom == Idiom.Tablet;
+#else
+				return true;
+#endif
+			}
+		}
 
-		#region MonoGame junk
-
-		const int millisPerFrame = 100;
-
-		GraphicsDeviceManager graphics;
-		SpriteBatch spriteBatch;
-		Texture2D mgLogo;
-		Rectangle mgLogoBox;
-
-		float rot = 0;
-		Vector2 center = new Vector2(200, 200);
-		bool gifSaveRequested = false;
-		bool doSingleScreenshot = false;
-		double lastUpdate = millisPerFrame;
-
-		#endregion //MonoGame junk
-
-		IGifHelper gif;
-		IScreenShotHelper ssh;
-		ImageList images;
-
-		#endregion //Properties
-
-		#region Methods
+		ScreenGrabber grabber;
 
 		public Game1()
 		{
-			graphics = new GraphicsDeviceManager(this);
+			Graphics.SupportedOrientations = DisplayOrientation.Portrait | DisplayOrientation.PortraitDown;
 
-			// using a small size until we implement some compression in the gifmaker
-			graphics.PreferredBackBufferHeight = 480;
-			graphics.PreferredBackBufferWidth = 640;
-			Content.RootDirectory = "Content";
+			VirtualResolution = new Point(720, 1280);
+			ScreenResolution = new Point(720, 1280);
+			Fullscreen = false;
+			Letterbox = IsTablet;
+
+#if DESKTOP
+			IsMouseVisible = true;
+#endif
+			
+
+			var messages = new ToastBuddy(this, @"Content\Fonts\ArialBlack14", UpperRight, Resolution.TransformationMatrix, Justify.Right);
 		}
 
-		/// <summary>
-		/// Allows the game to perform any initialization it needs to before starting to run.
-		/// This is where it can query for any required services and load any non-graphic
-		/// related content.  Calling base.Initialize will enumerate through any components
-		/// and initialize them as well.
-		/// </summary>
 		protected override void Initialize()
 		{
 			base.Initialize();
-			ssh = new ScreenShotHelper(GraphicsDevice);
-			gif = new GifHelper(GraphicsDevice);
-			images = new ImageList();
-			mgLogoBox = new Rectangle((graphics.PreferredBackBufferWidth / 3) + 200, (graphics.PreferredBackBufferHeight / 3), 400, 400);
+
+			grabber = new ScreenGrabber(new SpriteBatch(Graphics.GraphicsDevice), Graphics.GraphicsDevice, 0.2f);
+			Services.AddService<ScreenGrabber>(grabber);
 		}
 
-		/// <summary>
-		/// LoadContent will be called once per game and is the place to load
-		/// all of your content.
-		/// </summary>
-		protected override void LoadContent()
+		public Vector2 UpperRight()
 		{
-			// Create a new SpriteBatch, which can be used to draw textures.
-			spriteBatch = new SpriteBatch(GraphicsDevice);
-			mgLogo = Content.Load<Texture2D>("mglogo");
+			return new Vector2(Resolution.TitleSafeArea.Right, Resolution.TitleSafeArea.Top);
 		}
 
-		/// <summary>
-		/// Allows the game to run logic such as updating the world,
-		/// checking for collisions, gathering input, and playing audio.
-		/// </summary>
-		/// <param name="gameTime">Provides a snapshot of timing values.</param>
-		protected override void Update(GameTime gameTime)
+		protected override void InitStyles()
 		{
-#if !__IOS__
-			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-				Exit();
-#endif
+			//TODO: change the fonts here
+			StyleSheet.LargeFontResource = @"Fonts\ArialBlack96";
+			StyleSheet.MediumFontResource = @"Fonts\ArialBlack48";
+			StyleSheet.SmallFontResource = @"Fonts\ArialBlack24";
 
-			if (Keyboard.GetState().IsKeyDown(Keys.F12))
-			{
-				//only send a frame every 250ms
-				lastUpdate += gameTime.ElapsedGameTime.TotalMilliseconds;
-				if (lastUpdate > millisPerFrame)
-				{
-					gifSaveRequested = true;
-					images.AddFrame(GraphicsDevice, millisPerFrame);
-					lastUpdate = 0;
-				}
-			}
-			else if (gifSaveRequested)
-			{
-				var result = gif.Export(images);
-				images = new ImageList();
-				Console.WriteLine($"Wrote gif to: {result}");
-				gifSaveRequested = false;
-			}
-
-			if (Keyboard.GetState().IsKeyDown(Keys.F9))
-			{
-				if (!doSingleScreenshot)
-				{
-					var result = ssh.SaveScreenshot();
-					Console.WriteLine($"Wrote screenshot to: {result}");
-					doSingleScreenshot = true;
-				}
-			}
-			if (Keyboard.GetState().IsKeyUp(Keys.F9))
-			{
-				doSingleScreenshot = false;
-			}
-
-			rot += .05f;
-			if (rot > 180)
-				rot = 0;
-
-			base.Update(gameTime);
+			base.InitStyles();
 		}
 
-		/// <summary>
-		/// This is called when the game should draw itself.
-		/// </summary>
-		/// <param name="gameTime">Provides a snapshot of timing values.</param>
+		public override IScreen[] GetMainMenuScreenStack()
+		{
+			return new IScreen[] { new MainMenu() };
+		}
+
 		protected override void Draw(GameTime gameTime)
 		{
-			GraphicsDevice.Clear(Color.CornflowerBlue);
-
-			spriteBatch.Begin();
-			spriteBatch.Draw(mgLogo, mgLogoBox, null, Color.White, rot, center, SpriteEffects.None, 0);
-			spriteBatch.End();
-
+			grabber.BeginDraw();
 			base.Draw(gameTime);
+			grabber.Draw(gameTime);
 		}
-
-		#endregion //Methods
 	}
 }
