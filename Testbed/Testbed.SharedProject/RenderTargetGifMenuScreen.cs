@@ -44,7 +44,7 @@ namespace MonogameScreenToolsExample
 			helper = ScreenManager.Game.Services.GetService<IExternalStorageHelper>();
 
 			grabber = ScreenManager.Game.Services.GetService<ScreenGrabber>();
-			gif = new GifHelper(ScreenManager.Game.GraphicsDevice);
+			gif = new GifHelper();
 
 			mgLogoBox = new Rectangle((Resolution.ScreenArea.Width / 3) + 200, (Resolution.ScreenArea.Height / 3), 400, 400);
 			mgLogo = Content.Load<Texture2D>("mglogo");
@@ -88,7 +88,7 @@ namespace MonogameScreenToolsExample
 
 				gif.OnGifCreated -= Gif_OnGifCreated;
 				gif.OnGifCreated += Gif_OnGifCreated;
-				gif.Export(grabber.CurrentImageList);
+				gif.Export(grabber.CurrentImageList, "MonogameScreenToolsTest", true, 4);
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace MonogameScreenToolsExample
 			var messageDisplay = ScreenManager.Game.Services.GetService<IToastBuddy>();
 			messageDisplay.ShowMessage($"Wrote gif to: {e.Filename}", Color.Yellow);
 
-			ScreenManager.AddScreen(new OkScreen($"Took {e.ElpasedTime.Minutes}:{e.ElpasedTime.Seconds} to write the gif."));
+			ScreenManager.AddScreen(new OkScreen($"Took {e.TotalTime.Minutes}:{e.TotalTime.Seconds} to write the gif."));
 		}
 
 		public override void Draw(GameTime gameTime)

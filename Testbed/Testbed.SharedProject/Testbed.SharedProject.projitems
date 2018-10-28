@@ -10,7 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)RenderTargetGifMenuScreen.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BackBufferGifMenuScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScreenshotMenuScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainMenu.cs" />

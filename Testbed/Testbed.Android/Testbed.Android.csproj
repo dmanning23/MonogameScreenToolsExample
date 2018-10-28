@@ -51,9 +51,18 @@
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>ImageSharp</AndroidLinkSkip>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AndroidSupportedAbis>x86_64;arm64-v8a</AndroidSupportedAbis>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <AndroidEnableSGenConcurrent>false</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExternalStorageBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExternalStorageBuddy.1.0.1\lib\MonoAndroid10\ExternalStorageBuddy.Android.dll</HintPath>
+    </Reference>
     <Reference Include="FilenameBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FilenameBuddy.2.0.0\lib\MonoAndroid10\FilenameBuddy.Android.dll</HintPath>
     </Reference>
@@ -65,9 +74,6 @@
     </Reference>
     <Reference Include="HadoukInput.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HadoukInput.2.0.0\lib\MonoAndroid10\HadoukInput.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="ImageSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ImageSharp.1.0.0-alpha9-00194\lib\netstandard1.3\ImageSharp.dll</HintPath>
     </Reference>
     <Reference Include="InputHelper.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\InputHelper.2.0.0\lib\MonoAndroid10\InputHelper.Android.dll</HintPath>
@@ -82,6 +88,9 @@
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework, Version=3.7.0.1708, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.Android.3.7.0.1708\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonogameScreenTools.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\MonogameScreenTools.1.0.7\lib\MonoAndroid10\MonogameScreenTools.Android.dll</HintPath>
     </Reference>
     <Reference Include="MouseBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseBuddy.2.0.0\lib\MonoAndroid10\MouseBuddy.Android.dll</HintPath>
@@ -106,8 +115,11 @@
     <Reference Include="ResolutionBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ResolutionBuddy.2.0.1\lib\MonoAndroid10\ResolutionBuddy.Android.dll</HintPath>
     </Reference>
-    <Reference Include="SixLabors.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SixLabors.Core.0.1.0-alpha0002\lib\netstandard1.1\SixLabors.Core.dll</HintPath>
+    <Reference Include="SixLabors.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Core.1.0.0-beta0006\lib\netstandard1.1\SixLabors.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.ImageSharp.1.0.0-dev002099\lib\netstandard2.0\SixLabors.ImageSharp.dll</HintPath>
     </Reference>
     <Reference Include="StateMachineBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\StateMachineBuddy.2.0.0\lib\MonoAndroid10\StateMachineBuddy.Android.dll</HintPath>
@@ -177,16 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\ExternalStorageBuddy\ExternalStorageBuddy.Android\ExternalStorageBuddy.Android.csproj">
-      <Project>{b64d2be0-a882-4f47-8105-13dbf07b93f8}</Project>
-      <Name>ExternalStorageBuddy.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\MonogameScreenTools\MonogameScreenTools\MonogameScreenTools.Android\MonogameScreenTools.Android.csproj">
-      <Project>{14eed474-c3a7-4375-bf70-7407b1106978}</Project>
-      <Name>MonogameScreenTools.Android</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="..\Testbed.SharedProject\Testbed.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
