@@ -19,7 +19,6 @@ namespace MonogameScreenToolsExample.Android
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
-			var buh = new System.Span<byte>();
 			base.OnCreate(bundle);
 
 			Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);

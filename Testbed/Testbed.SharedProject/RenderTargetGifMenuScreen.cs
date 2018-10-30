@@ -19,7 +19,7 @@ namespace MonogameScreenToolsExample
 		float rot = 0;
 		Vector2 center = new Vector2(200, 200);
 
-		ScreenGrabber grabber;
+		IScreenGrabber grabber;
 		IGifHelper gif;
 
 		IExternalStorageHelper helper;
@@ -43,7 +43,7 @@ namespace MonogameScreenToolsExample
 
 			helper = ScreenManager.Game.Services.GetService<IExternalStorageHelper>();
 
-			grabber = ScreenManager.Game.Services.GetService<ScreenGrabber>();
+			grabber = ScreenManager.Game.Services.GetService<IScreenGrabber>();
 			gif = new GifHelper();
 
 			mgLogoBox = new Rectangle((Resolution.ScreenArea.Width / 3) + 200, (Resolution.ScreenArea.Height / 3), 400, 400);

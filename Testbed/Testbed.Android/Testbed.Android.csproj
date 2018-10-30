@@ -89,9 +89,6 @@
     <Reference Include="MonoGame.Framework, Version=3.7.0.1708, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.Android.3.7.0.1708\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="MonogameScreenTools.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\MonogameScreenTools.1.0.7\lib\MonoAndroid10\MonogameScreenTools.Android.dll</HintPath>
-    </Reference>
     <Reference Include="MouseBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseBuddy.2.0.0\lib\MonoAndroid10\MouseBuddy.Android.dll</HintPath>
     </Reference>
@@ -189,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MonogameScreenTools\MonogameScreenTools\MonogameScreenTools.Android\MonogameScreenTools.Android.csproj">
+      <Project>{14eed474-c3a7-4375-bf70-7407b1106978}</Project>
+      <Name>MonogameScreenTools.Android</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\Testbed.SharedProject\Testbed.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

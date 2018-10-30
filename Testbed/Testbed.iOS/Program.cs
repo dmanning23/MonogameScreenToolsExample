@@ -1,5 +1,4 @@
-﻿using System;
-using ExternalStorageBuddy;
+﻿using ExternalStorageBuddy;
 using ExternalStorageBuddy.iOS;
 using Foundation;
 using UIKit;

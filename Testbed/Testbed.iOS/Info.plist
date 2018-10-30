@@ -9,7 +9,7 @@
 		<string>GameThumbnail.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>project.MonoGame.Testbed.iOS</string>
+	<string>com.dannobotgames.Testbed</string>
 	<key>MinimumOSVersion</key>
 	<string>7.0</string>
 	<key>UISupportedInterfaceOrientations</key>

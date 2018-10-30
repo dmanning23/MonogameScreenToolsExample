@@ -54,7 +54,7 @@ namespace MonogameScreenToolsExample
 			base.Initialize();
 
 			grabber = new ScreenGrabber(new SpriteBatch(Graphics.GraphicsDevice), Graphics.GraphicsDevice, 0.2f);
-			Services.AddService<ScreenGrabber>(grabber);
+			Services.AddService<IScreenGrabber>(grabber);
 		}
 
 		public Vector2 UpperRight()
