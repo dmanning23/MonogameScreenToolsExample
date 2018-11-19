@@ -88,7 +88,7 @@ namespace MonogameScreenToolsExample
 
 				gif.OnGifCreated -= Gif_OnGifCreated;
 				gif.OnGifCreated += Gif_OnGifCreated;
-				gif.Export(grabber.CurrentImageList, "MonogameScreenToolsTest", true, 4);
+				gif.Export(grabber.CurrentImageList, "MonogameScreenToolsTest", true, 2);
 			}
 		}
 
