@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonogameScreenTools;
 using ResolutionBuddy;
+using ShareBuddy;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using ToastBuddyLib;
 
 namespace MonogameScreenToolsExample
@@ -37,9 +40,9 @@ namespace MonogameScreenToolsExample
 			CoverOtherScreens = true;
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			helper = ScreenManager.Game.Services.GetService<IExternalStorageHelper>();
 
@@ -106,10 +109,25 @@ namespace MonogameScreenToolsExample
 		private void Gif_OnGifCreated(object sender, GifCreatedEventArgs e)
 		{
 			gif.OnGifCreated -= Gif_OnGifCreated;
-			var messageDisplay = ScreenManager.Game.Services.GetService<IToastBuddy>();
-			messageDisplay.ShowMessage($"Wrote gif to: {e.Filename}", Color.Yellow);
 
-			ScreenManager.AddScreen(new OkScreen($"Took {e.TotalTime.Minutes}:{e.TotalTime.Seconds} to write the gif."));
+			if (!string.IsNullOrEmpty(e.ErrorMessage))
+			{
+				ScreenManager.AddScreen(new ErrorScreen(e.ErrorMessage));
+			}
+			else
+			{
+				var messageDisplay = ScreenManager.Game.Services.GetService<IToastBuddy>();
+				messageDisplay.ShowMessage($"Wrote gif to: {e.Filename}", Color.Yellow);
+				Debug.Print($"Wrote gif to: {e.Filename}");
+
+				var okScreen = new OkScreen($"Took {e.TotalTime.Minutes}:{e.TotalTime.Seconds} to write the gif.");
+				okScreen.OnSelect += (obj, args) =>
+				{
+					var sharer = new ShareHelper(ScreenManager.Game);
+					sharer.ShareImage(e.Filename, "Share helper test");
+				};
+				ScreenManager.AddScreen(okScreen);
+			}
 		}
 
 		public override void Draw(GameTime gameTime)

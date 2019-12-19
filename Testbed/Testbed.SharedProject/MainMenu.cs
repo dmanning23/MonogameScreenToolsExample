@@ -1,5 +1,6 @@
 using InputHelper;
 using MenuBuddy;
+using System.Threading.Tasks;
 
 namespace MonogameScreenToolsExample
 {
@@ -11,9 +12,9 @@ namespace MonogameScreenToolsExample
 			CoveredByOtherScreens = true;
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			var renderTargetMenuEntry = new MenuEntry("Gif Tests", Content);
 			AddMenuEntry(renderTargetMenuEntry);

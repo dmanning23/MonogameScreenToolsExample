@@ -21,6 +21,9 @@ namespace MonogameScreenToolsExample.Android
 		{
 			base.OnCreate(bundle);
 
+			StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+			StrictMode.SetVmPolicy(builder.Build());
+
 			Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);
 
 			var g = new Game1();

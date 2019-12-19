@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonogameScreenTools;
 using ResolutionBuddy;
+using System.Threading.Tasks;
 using ToastBuddyLib;
 
 namespace MonogameScreenToolsExample
@@ -32,9 +33,9 @@ namespace MonogameScreenToolsExample
 			CoverOtherScreens = true;
 		}
 
-		public override void LoadContent()
+		public override async Task LoadContent()
 		{
-			base.LoadContent();
+			await base.LoadContent();
 
 			helper = ScreenManager.Game.Services.GetService<IExternalStorageHelper>();
 
