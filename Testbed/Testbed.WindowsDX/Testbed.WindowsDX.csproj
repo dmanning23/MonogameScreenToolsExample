@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props')" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,28 +51,28 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExternalStorageBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExternalStorageBuddy.1.0.3\lib\net451\ExternalStorageBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\ExternalStorageBuddy.1.0.4\lib\net451\ExternalStorageBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="FilenameBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FilenameBuddy.2.0.8\lib\net452\FilenameBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="FontBuddyLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontBuddy.2.0.6\lib\net451\FontBuddyLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\FontBuddy.2.0.18\lib\net451\FontBuddyLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameTimer.2.0.0\lib\net452\GameTimer.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\GameTimer.2.1.0\lib\net452\GameTimer.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="HadoukInput.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HadoukInput.2.0.27\lib\net451\HadoukInput.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\HadoukInput.2.0.32\lib\net451\HadoukInput.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="InputHelper.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\InputHelper.2.0.6\lib\net451\InputHelper.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\InputHelper.2.0.11\lib\net451\InputHelper.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MatrixExtensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MatrixExtensions.2.0.0\lib\net451\MatrixExtensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MenuBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MenuBuddy.2.0.48\lib\net451\MenuBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MenuBuddy.2.0.82\lib\net451\MenuBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
@@ -81,10 +81,10 @@
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="MonogameScreenTools.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonogameScreenTools.2.0.12\lib\net451\MonogameScreenTools.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MonogameScreenTools.2.0.13\lib\net451\MonogameScreenTools.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MouseBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MouseBuddy.2.0.2\lib\net451\MouseBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MouseBuddy.2.0.4\lib\net451\MouseBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.DeviceInfo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xam.Plugin.DeviceInfo.4.1.1\lib\net45\Plugin.DeviceInfo.dll</HintPath>
@@ -93,16 +93,16 @@
       <HintPath>..\packages\Plugin.Permissions.3.0.0.12\lib\netstandard2.0\Plugin.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.2.0.0\lib\net451\PrimitiveBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.2.0.1\lib\net451\PrimitiveBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="RandomExtensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.0\lib\net452\RandomExtensions.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.1\lib\net452\RandomExtensions.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="ResolutionBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ResolutionBuddy.2.0.1\lib\net451\ResolutionBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\ResolutionBuddy.2.0.4\lib\net451\ResolutionBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="ShareBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ShareBuddy.2.0.9\lib\net451\ShareBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\ShareBuddy.2.0.12\lib\net451\ShareBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
@@ -134,11 +134,14 @@
     <Reference Include="SixLabors.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SixLabors.Core.1.0.0-dev000141\lib\netstandard2.0\SixLabors.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SixLabors.ImageSharp.1.0.0-dev003153\lib\netstandard2.0\SixLabors.ImageSharp.dll</HintPath>
+    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.ImageSharp.1.0.1\lib\netstandard2.0\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SpriteFontPlus, Version=0.7.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpriteFontPlus.MonoGame.0.7.0.22\lib\net45\SpriteFontPlus.dll</HintPath>
     </Reference>
     <Reference Include="StateMachineBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\StateMachineBuddy.2.0.19\lib\net451\StateMachineBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\StateMachineBuddy.2.0.21\lib\net451\StateMachineBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -147,7 +150,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -156,7 +159,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -186,7 +189,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
@@ -203,7 +206,7 @@
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
@@ -241,10 +244,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ToastBuddyLib.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ToastBuddyLib.2.0.1\lib\net451\ToastBuddyLib.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\ToastBuddyLib.2.0.9\lib\net451\ToastBuddyLib.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="TouchScreenBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TouchScreenBuddy.2.0.6\lib\net451\TouchScreenBuddy.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\TouchScreenBuddy.2.0.9\lib\net451\TouchScreenBuddy.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="Vector2Extensions.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vector2Extensions.2.0.2\lib\net451\Vector2Extensions.WindowsDX.dll</HintPath>
@@ -272,7 +275,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
     <Error Condition="!Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props'))" />
   </Target>
   <Import Project="..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets" Condition="Exists('..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\build\MonoGame.Framework.WindowsDX.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

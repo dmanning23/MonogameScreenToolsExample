@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace MonogameScreenToolsExample
 {
-	public class MainMenu : MenuScreen
+	public class MainMenu : MenuStackScreen
 	{
 		public MainMenu() : base("MonogameScreenTools Example")
 		{

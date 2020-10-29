@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props')" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -63,39 +63,39 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExternalStorageBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExternalStorageBuddy.1.0.3\lib\MonoAndroid10\ExternalStorageBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\ExternalStorageBuddy.1.0.4\lib\MonoAndroid10\ExternalStorageBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="FilenameBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FilenameBuddy.2.0.8\lib\MonoAndroid10\FilenameBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="FontBuddyLib.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontBuddy.2.0.6\lib\MonoAndroid10\FontBuddyLib.Android.dll</HintPath>
+      <HintPath>..\packages\FontBuddy.2.0.18\lib\MonoAndroid10\FontBuddyLib.Android.dll</HintPath>
     </Reference>
     <Reference Include="GameTimer.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GameTimer.2.0.0\lib\MonoAndroid10\GameTimer.Android.dll</HintPath>
+      <HintPath>..\packages\GameTimer.2.1.0\lib\MonoAndroid10\GameTimer.Android.dll</HintPath>
     </Reference>
     <Reference Include="HadoukInput.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HadoukInput.2.0.27\lib\MonoAndroid10\HadoukInput.Android.dll</HintPath>
+      <HintPath>..\packages\HadoukInput.2.0.32\lib\MonoAndroid10\HadoukInput.Android.dll</HintPath>
     </Reference>
     <Reference Include="InputHelper.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\InputHelper.2.0.6\lib\MonoAndroid10\InputHelper.Android.dll</HintPath>
+      <HintPath>..\packages\InputHelper.2.0.11\lib\MonoAndroid10\InputHelper.Android.dll</HintPath>
     </Reference>
     <Reference Include="Java.Interop" />
     <Reference Include="MatrixExtensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MatrixExtensions.2.0.0\lib\MonoAndroid10\MatrixExtensions.Android.dll</HintPath>
     </Reference>
     <Reference Include="MenuBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MenuBuddy.2.0.48\lib\MonoAndroid10\MenuBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\MenuBuddy.2.0.82\lib\MonoAndroid10\MenuBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.Android.3.7.1.189\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="MonogameScreenTools.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonogameScreenTools.2.0.12\lib\MonoAndroid10\MonogameScreenTools.Android.dll</HintPath>
+      <HintPath>..\packages\MonogameScreenTools.2.0.13\lib\MonoAndroid10\MonogameScreenTools.Android.dll</HintPath>
     </Reference>
     <Reference Include="MouseBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MouseBuddy.2.0.2\lib\MonoAndroid10\MouseBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\MouseBuddy.2.0.4\lib\MonoAndroid10\MouseBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="OpenTK-1.0" />
@@ -109,48 +109,51 @@
       <HintPath>..\packages\Plugin.Permissions.3.0.0.12\lib\monoandroid71\Plugin.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="PrimitiveBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\PrimitiveBuddy.2.0.0\lib\MonoAndroid10\PrimitiveBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\PrimitiveBuddy.2.0.1\lib\MonoAndroid10\PrimitiveBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="RandomExtensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.0\lib\MonoAndroid10\RandomExtensions.Android.dll</HintPath>
+      <HintPath>..\packages\RandomExtensions.dmanning23.2.0.1\lib\MonoAndroid10\RandomExtensions.Android.dll</HintPath>
     </Reference>
     <Reference Include="ResolutionBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ResolutionBuddy.2.0.1\lib\MonoAndroid10\ResolutionBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\ResolutionBuddy.2.0.4\lib\MonoAndroid10\ResolutionBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="ShareBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ShareBuddy.2.0.9\lib\MonoAndroid10\ShareBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\ShareBuddy.2.0.12\lib\MonoAndroid10\ShareBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="SixLabors.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SixLabors.Core.1.0.0-dev000141\lib\netstandard2.0\SixLabors.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SixLabors.ImageSharp.1.0.0-dev003153\lib\netstandard2.0\SixLabors.ImageSharp.dll</HintPath>
+    <Reference Include="SixLabors.ImageSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.ImageSharp.1.0.1\lib\netstandard2.1\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SpriteFontPlus, Version=0.7.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpriteFontPlus.MonoGame.0.7.0.22\lib\netstandard2.0\SpriteFontPlus.dll</HintPath>
     </Reference>
     <Reference Include="StateMachineBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\StateMachineBuddy.2.0.19\lib\MonoAndroid10\StateMachineBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\StateMachineBuddy.2.0.21\lib\MonoAndroid10\StateMachineBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <HintPath>..\packages\System.Memory.4.5.4\lib\netstandard2.0\System.Memory.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="ToastBuddyLib.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ToastBuddyLib.2.0.1\lib\MonoAndroid10\ToastBuddyLib.Android.dll</HintPath>
+      <HintPath>..\packages\ToastBuddyLib.2.0.9\lib\MonoAndroid10\ToastBuddyLib.Android.dll</HintPath>
     </Reference>
     <Reference Include="TouchScreenBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TouchScreenBuddy.2.0.6\lib\MonoAndroid10\TouchScreenBuddy.Android.dll</HintPath>
+      <HintPath>..\packages\TouchScreenBuddy.2.0.9\lib\MonoAndroid10\TouchScreenBuddy.Android.dll</HintPath>
     </Reference>
     <Reference Include="Vector2Extensions.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vector2Extensions.2.0.2\lib\MonoAndroid10\Vector2Extensions.Android.dll</HintPath>
@@ -262,7 +265,7 @@
     <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Compat.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Compat.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Compat.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Compat.targets'))" />
     <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Loader.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Loader.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Loader.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Loader.targets'))" />
     <Error Condition="!Exists('..\packages\Xamarin.Android.Support.Core.Utils.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Core.Utils.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Android.Support.Core.Utils.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Core.Utils.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.Toolset.3.3.1\build\Microsoft.Net.Compilers.Toolset.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.Toolset.3.7.0\build\Microsoft.Net.Compilers.Toolset.props'))" />
   </Target>
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />
