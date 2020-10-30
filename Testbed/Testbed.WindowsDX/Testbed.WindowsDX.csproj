@@ -81,7 +81,7 @@
       <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="MonogameScreenTools.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonogameScreenTools.2.0.13\lib\net451\MonogameScreenTools.WindowsDX.dll</HintPath>
+      <HintPath>..\packages\MonogameScreenTools.2.0.15\lib\net451\MonogameScreenTools.WindowsDX.dll</HintPath>
     </Reference>
     <Reference Include="MouseBuddy.WindowsDX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseBuddy.2.0.4\lib\net451\MouseBuddy.WindowsDX.dll</HintPath>

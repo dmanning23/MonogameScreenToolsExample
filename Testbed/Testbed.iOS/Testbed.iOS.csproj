@@ -145,7 +145,7 @@
       <HintPath>..\packages\MonoGame.Framework.iOS.3.7.1.189\lib\XamariniOS\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="MonogameScreenTools.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonogameScreenTools.2.0.13\lib\Xamarin.iOS10\MonogameScreenTools.iOS.dll</HintPath>
+      <HintPath>..\packages\MonogameScreenTools.2.0.15\lib\Xamarin.iOS10\MonogameScreenTools.iOS.dll</HintPath>
     </Reference>
     <Reference Include="MouseBuddy.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseBuddy.2.0.4\lib\Xamarin.iOS10\MouseBuddy.iOS.dll</HintPath>

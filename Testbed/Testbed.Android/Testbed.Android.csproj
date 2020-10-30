@@ -92,7 +92,7 @@
       <HintPath>..\packages\MonoGame.Framework.Android.3.7.1.189\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="MonogameScreenTools.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MonogameScreenTools.2.0.13\lib\MonoAndroid10\MonogameScreenTools.Android.dll</HintPath>
+      <HintPath>..\packages\MonogameScreenTools.2.0.15\lib\MonoAndroid10\MonogameScreenTools.Android.dll</HintPath>
     </Reference>
     <Reference Include="MouseBuddy.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MouseBuddy.2.0.4\lib\MonoAndroid10\MouseBuddy.Android.dll</HintPath>
